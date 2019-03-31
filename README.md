@@ -1,6 +1,4 @@
-#Bluetooth Communication - UART
-Implementing an application that communicates between a micro:bit and another device, using either the  Bluetooth LE
-
+# Bluetooth Communication - UART
 This micro-bit program lets you send and receive strings between a BBC micro:bits and a blutetooth connected device via the UART serial interface.
 
 UART stands for Universal Asynchronus receiver/transmitter) it is a form ofcommunication via hardware over a serial connection, in which the data format and transmission speeds are configurable.
@@ -8,7 +6,7 @@ UART stands for Universal Asynchronus receiver/transmitter) it is a form ofcommu
 As the BBC micro:bit does not have a keyboard and only has two buttons that we canuse as inputs, the program lets the user use morse code to input words and send it over blutooth to the device. The device can receive the message via an app that supports serial comunication over blutooth and is for bluetooth LE devices. I recommend uisng [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android. The program also lets the device to sends strings to the BBC micro-bit, which is then scrlled through its LED matrix. 
 
 
-##Setup
+## Setup
 - Compile the `UART.cpp` and copy the `.HEX` file created to the micro:bit. This will cause the micro:bit to restart.
 - Connect the micro bits to a power source (USB/ Battery)
 - Install the app, [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android or any other app that supports serial connections over bluetooth.
