@@ -14,11 +14,17 @@ As the BBC micro:bit does not have a keyboard and only has two buttons that we c
 - User can use the phone app textbox and keyboard to send string to the micro-bit and use the micro-bit button and morsecode to send string to the phone.
 
 ## Controls
-- Press `Button B` to send a **DOT**
-- Hold `Button B` to send a **DASH**
-- Press `Button A` to send the translate signal to the receiving micro:bit to translate the sent code. Do wait for the animation to stop indicating the deivice is ready to send the second code.
+### micro:bit to Device
+- Press `Button B` for a **DOT**
+- Hold `Button B` for a **DASH**
+- Press `Button A` to save the letter, and use the `Button B` again to input the nect letter of the string that you want to send.
 - If the program can’t translate the code into a letter, All the LED's will blink and will be followed by a sad face. Restart the micro:bit and try again.
-- If you try to send more than 5 codes to the receiver. An X will be displayed, and all the variables will be reset.
+- If you try to input more than 5 codes to the receiver. An X will be displayed, and all the variables will be reset.
 - Hold `Button B` to view the whole word thats has been transmitted.
+- And finally press `Button A` adn `Button B` together to send the word to the device.
 
-
+### Device to micro:bit
+- Open the app and scan devices
+- Allow admisistrative privileges if your pormpt by the device
+- One the device is paired use the keyboard to write the word and press send to send it over to the micro:bit
+- The word or string scolls throught the micro:bits display
