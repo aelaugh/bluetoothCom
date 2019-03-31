@@ -1,17 +1,17 @@
 # Bluetooth Communication - UART
-This micro-bit program lets you send and receive strings between a BBC micro:bits and a blutetooth connected device via the UART serial interface.
+This micro:bit program lets you send and receive strings between a BBC micro:bits and a blutetooth connected device via the UART serial interface.
 
 UART stands for Universal Asynchronus receiver/transmitter) it is a form ofcommunication via hardware over a serial connection, in which the data format and transmission speeds are configurable.
 
-As the BBC micro:bit does not have a keyboard and only has two buttons that we canuse as inputs, the program lets the user use morse code to input words and send it over blutooth to the device. The device can receive the message via an app that supports serial comunication over blutooth and is for bluetooth LE devices. I recommend uisng [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android. The program also lets the device to sends strings to the BBC micro-bit, which is then scrlled through its LED matrix. 
+As the BBC micro:bit does not have a keyboard and only has two buttons that we canuse as inputs, the program lets the user use morse code to input words and send it over blutooth to the device. The device can receive the message via an app that supports serial comunication over blutooth and is for bluetooth LE devices. I recommend uisng [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android. The program also lets the device to sends strings to the BBC micro:bit, which is then scrlled through its LED matrix. 
 
 
 ## Setup
 - Compile the `UART.cpp` and copy the `.HEX` file created to the micro:bit. This will cause the micro:bit to restart.
 - Connect the micro bits to a power source (USB/ Battery)
 - Install the app, [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android or any other app that supports serial connections over bluetooth.
-- Open the app on the phone and scan and pair the device and the micor:bit. the user will be notified by the phone app and a 'C' will be displayed on the micro-bit once the connection is established
-- User can use the phone app textbox and keyboard to send string to the micro-bit and use the micro-bit button and morsecode to send string to the phone.
+- Open the app on the phone and scan and pair the device and the micor:bit. the user will be notified by the phone app and a 'C' will be displayed on the micro:bit once the connection is established
+- User can use the phone app textbox and keyboard to send string to the micro:bit and use the micro:bit button and morsecode to send string to the phone.
 
 ## Controls
 ### micro:bit to Device
@@ -24,7 +24,30 @@ As the BBC micro:bit does not have a keyboard and only has two buttons that we c
 - And finally press `Button A` adn `Button B` together to send the word to the device.
 
 ### Device to micro:bit
-- Open the app and scan devices
+- Open the app and scan for devices
 - Allow admisistrative privileges if your pormpt by the device
 - One the device is paired use the keyboard to write the word and press send to send it over to the micro:bit
 - The word or string scolls throught the micro:bits display
+
+
+#### Notes
+In order to make the testing and pairing easier i have made few changes to the `MicroBitConfig.h` and are optional.
+
+```c
+//line 190, original value 0
+#define MICROBIT_BLE_OPEN	1 
+
+//line 198
+#define MICROBIT_BLE_DEFAULT_TX_POWER	6
+
+//line 198, disabel whitelist
+#define MICROBIT_BLE_WHITELIST	0 //1  
+```
+
+Made few changed to the heap size and GATT table since bluetooth tends to eat up a lot of memory
+
+```c
+#define MICROBIT_NESTED_HEAP_SIZE	0.50 
+
+#define MICROBIT_SD_GATT_TABLE_SIZE	0x300
+```
