@@ -31,8 +31,10 @@ The main two function `onConnected()` and `onDisonnected()` is used when the mic
 - One the device is paired use the keyboard to write the word and press send to send it over to the micro:bit
 - The word or string scrolls through the micro:bits display.
 
+---
+
 #### Notes
-In order to make the testing and pairing easier i have made few changes to the `MicroBitConfig.h` and are optional, so you can change them back to bring back the pairing.
+In order to make the testing and pairing easier i have made few changes to the `MicroBitConfig.h` and are optional, so you can change them back to bring back the default pairing mode.
 
 ```c
 //line 190 - original value 0
