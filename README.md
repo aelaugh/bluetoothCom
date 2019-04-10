@@ -9,7 +9,7 @@ The main two function `onConnected()` and `onDisonnected()` is used when the mic
 
 
 ## Setup
-- Compile the `UART.cpp` and copy the `.HEX` file created to the micro:bit. This will cause the micro:bit to restart.
+- Compile the `mainBLE.cpp` and copy the `.HEX` file created to the micro:bit. This will cause the micro:bit to restart.
 - Connect the micro bits to a power source (USB/ Battery)
 - Install the app, [Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) for Android or any other app that supports serial connections over Bluetooth.
 - Open the app on the phone and scan and pair the device and the micor:bit. the user will be notified by the phone app and a 'C' will be displayed on the micro:bit once the connection is established
